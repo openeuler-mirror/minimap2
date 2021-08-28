@@ -1,0 +1,39 @@
+From ee1bce7374a982818041fe31a18148b6b3c972fe Mon Sep 17 00:00:00 2001
+From: yangzhao_kl <yangzhao1@kylinos.cn>
+Date: Sat, 28 Aug 2021 15:38:43 +0800
+Subject: [PATCH] fix man command
+
+---
+ README.md | 2 +-
+ main.c    | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/README.md b/README.md
+index 5e39daf..e1c6878 100644
+--- a/README.md
++++ b/README.md
+@@ -23,7 +23,7 @@ cd minimap2 && make
+ ./minimap2 -x ava-pb reads.fa reads.fa > overlaps.paf     # PacBio read overlap
+ ./minimap2 -x ava-ont reads.fa reads.fa > overlaps.paf    # Nanopore read overlap
+ # man page for detailed command line options
+-man ./minimap2.1
++man minimap2.1
+ ```
+ ## Table of Contents
+ 
+diff --git a/main.c b/main.c
+index 5bf0fc8..90638bc 100644
+--- a/main.c
++++ b/main.c
+@@ -327,7 +327,7 @@ int main(int argc, char *argv[])
+ 		fprintf(fp_help, "                 - asm5/asm10/asm20: asm-to-ref mapping, for ~0.1/1/5%% sequence divergence\n");
+ 		fprintf(fp_help, "                 - splice: long-read spliced alignment\n");
+ 		fprintf(fp_help, "                 - sr: genomic short-read mapping\n");
+-		fprintf(fp_help, "\nSee `man ./minimap2.1' for detailed description of these and other advanced command-line options.\n");
++		fprintf(fp_help, "\nSee `man minimap2.1' for detailed description of these and other advanced command-line options.\n");
+ 		return fp_help == stdout? 0 : 1;
+ 	}
+ 
+-- 
+2.31.1.windows.1
+
