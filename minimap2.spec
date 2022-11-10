@@ -1,10 +1,10 @@
 Name:    minimap2
 Version: 2.17
-Release: 2
+Release: 3
 Summary: A versatile pairwise aligner for genomic and spliced nucleotide sequences
 License: MIT
 URL:     https://lh3.github.io/minimap2/
-Source0: https://github.com/lh3/minimap2/archive/refs/tags/v2.17.tar.bz2
+Source0: https://github.com/lh3/minimap2/releases/download/v%{version}/%{name}-%{version}.tar.bz2
 Patch0:  0001-fix-man-command.patch
 
 BuildRequires:  gcc make zlib-devel
@@ -41,6 +41,9 @@ cp ./minimap2.1 %{buildroot}%{_mandir}/man1/
 %{_mandir}/*
 
 %changelog
+* Thu Nov 10 2022 xu_ping <xuping33@h-partners.com> - 2.17-3
+- fix source url
+
 * Sat Aug 28 2021 yangzhao <yangzhao1@kylinos.cn> - 2.17-2
 - fix man command
 
